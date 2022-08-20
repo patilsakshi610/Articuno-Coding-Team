@@ -1,6 +1,5 @@
 import { useState, useContext } from "react";
 import "./mainsection.css";
-import Dropdown from "react-bootstrap/Dropdown";
 import arrow from "../../Assets/arrow.svg";
 import { useNavigate } from "react-router-dom";
 import AuthContext from "../../Context/AuthContext";
@@ -110,6 +109,7 @@ const LeftCard = () => {
         <div className="dropdown">
           <button onClick={() => setShowDropdown(!showDropdown)}>
             {inpuData.country ? inpuData.country : "Country"}
+            <img src={arrow} />
           </button>
           {showDropdown && (
             <div className="dropdown-Menu">
